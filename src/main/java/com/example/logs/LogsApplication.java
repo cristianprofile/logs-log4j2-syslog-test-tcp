@@ -1,20 +1,30 @@
 package com.example.logs;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LogsApplication {
+public class LogsApplication implements ApplicationRunner {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(LogsApplication.class);
+    private static final Logger logger = LogManager.getLogger(LogsApplication.class);
+
+
+
+
 
     public static void main(String[] args) {
 
-
         SpringApplication.run(LogsApplication.class, args);
+    }
+
+    @Override
+    public void run(ApplicationArguments applicationArguments) throws Exception {
         logger.info("TESTING INFO SERVICE FOR APPLICATION ID: " +
                 "234242342423423ERTREDFQVVVVVVVCCccccccccccssdfsdfsfsdfsfs. CALLBACK INFO: " +
                 "{\"attttrr1\":{\"attttrr2\":\"anonymous\",\"attttrr5\":{\"attttrr13434\":\"432265ZZZZZZ6893\"," +
@@ -91,4 +101,5 @@ public class LogsApplication {
                 "\"staasdasdasdasdasdasdasdsdfsdfsfsdfasdasdasdasdtuasdwersdf " +
                 "dsfert sdfsdfsdertertertsdfsdfertert The end");
     }
+
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            [%t] %d{yyyy-MM-dd HH:mm:ss:SSS} [%X{correlationId}] [%X{ip}] %-5p %c - %m%n
+        </Property>
+    </Properties>
+
+    <Appenders>
+
+        <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+
+        <Syslog name="bsd" host="localhost" port="514" protocol="TCP"/>
+    </Appenders>
+
+    <Loggers>
+        <AsyncLogger name="com.example.log4j2de3333mo" level="debug"
+                     additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="bsd" />
+        </AsyncLogger>
+
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+            <AppenderRef ref="bsd" />
+        </Root>
+    </Loggers>
+</Configuration>
