@@ -18,7 +18,7 @@ public class LogsApplication {
         logger.info("TESTING INFO SERVICE FOR APPLICATION ID: " +
                 "234242342423423ERTREDFQVVVVVVVCCccccccccccssdfsdfsfsdfsfs. CALLBACK INFO: " +
                 "{\"attttrr1\":{\"attttrr2\":\"anonymous\",\"attttrr5\":{\"attttrr13434\":\"432265ZZZZZZ6893\"," +
-                "\"expirationDate\":\"03/23\",\"attttrr12342\":\"Pepe Viruela Casas del Olmo\"}}," +
+                "\"expirationDate\":\"cd t03/23\",\"attttrr12342\":\"Pepe Viruela Casas del Olmo\"}}," +
                 "\"attttrr66666\":{\"customIdentifier" +
                 "\":\"1b98d1ab83c1400asdadadasdasdsadasdasdadasdasdasds30211c51ad5bfc30bfb2a73d188548eiosdfhisdfhsiufydfyisdyfusdifysidyfuisdyfisydfuisydfuisdyfuisdyfuisdfyis49813b3084226cc23c\",\"concept\":\"Pago con " +
                 "tarjeasdadsadssdfdsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsfsdfsfsdfadadasdasdta " +
