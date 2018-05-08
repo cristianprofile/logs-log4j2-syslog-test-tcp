@@ -12,37 +12,12 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
 
-
-        <Syslog name="bsd" host="localhost" port="514" protocol="TCP"/>
-
-        <!-- SMTP Appender
-        <SMTP name="MailAppender"
-              subject="Log4j2 Demo [PROD]"
-              to="youremail@example.com"
-              from="log4j2-demo-alerts@example.com"
-              smtpHost="yourSMTPHost"
-              smtpPort="587"
-              smtpUsername="yourSMTPUsername"
-              smtpPassword="yourSMTPPassword"
-              bufferSize="1">
-            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
-            <PatternLayout>
-                <Pattern>${LOG_PATTERN}</Pattern>
-            </PatternLayout>
-        </SMTP>
-         -->
     </Appenders>
 
     <Loggers>
-        <AsyncLogger name="com.example.log4j2de3333mo" level="debug"
-                     additivity="false">
-            <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
-        </AsyncLogger>
 
-        <Root level="info">
+        <Root level="debug">
             <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
         </Root>
     </Loggers>
 </Configuration>

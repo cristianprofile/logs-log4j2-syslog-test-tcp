@@ -13,21 +13,19 @@
         </Console>
 
 
-        <Syslog name="bsd" host="localhost" port="514" protocol="TCP"/>
+        <Socket name="syslogsocket" host="localhost" port="514" protocol="TCP">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Socket>
+
     </Appenders>
 
     <Loggers>
-        <AsyncLogger name="com.example.log4j2de3333mo" level="debug"
-                     additivity="false">
-            <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
-            <AppenderRef ref="bsd" />
-        </AsyncLogger>
 
-        <Root level="info">
+        <Logger name="com.example.logs" level="DEBUG"
+                additivity="false">
             <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
-            <AppenderRef ref="bsd" />
-        </Root>
+            <AppenderRef ref="syslogsocket" />
+        </Logger>
+
     </Loggers>
 </Configuration>
